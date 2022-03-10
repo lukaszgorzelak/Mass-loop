@@ -1,0 +1,121 @@
+.header-container {
+    display:grid;
+    grid-template-columns: 15rem 1fr 34rem;
+    height: 9rem;
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, xl)) {
+        grid-template-columns: 1fr 1fr 14rem;
+    }
+    .logo {
+        margin-top: 4.5rem;
+        margin-left: 11.008rem;
+
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, xl)) {
+            margin-top: 6.5rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .nav {
+        .nav__list {
+            display: none;
+            @media all and (min-width: map-get($brakepoints, xl)) {
+                display: grid;
+            }
+            justify-content: end;
+            grid-template-columns: 154px 162px 122px 220px;
+            .nav__list-item {
+                @include font(normal,1.6rem,1.95rem);
+                margin-left: 5rem;
+                margin-top: 6rem;
+                .nav__link {
+                    text-decoration: none;
+                    color: $main_black;
+                }
+            }
+        }
+    }
+}
+
+.aside {
+    display: flex;
+    align-items: baseline;
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, xl)) {
+        align-items: center;
+    }
+
+    .languages__list {
+        padding: 2rem;
+        width: 7.7rem;
+        height: 0;
+        background: #FFFFFF;
+        cursor: pointer;
+        transition: height 0.7s;
+        margin-left: 0.5rem;
+        z-index: 3;
+
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, xl)) {
+            margin-top: 5rem;
+            margin-left: 0.9rem;
+        }
+
+        &:hover {
+            height: 20.3rem;
+            box-shadow: 0px 1.5rem 3rem rgba(0, 0, 0, 0.1);
+            .languages__list-item {
+                border-bottom: 0.5px solid #C2C2C2;
+                display: block;
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
+
+        .languages__list-item {
+            @include font(normal,1.6rem,1.95rem);
+            list-style: none;
+            text-align: center;
+            color: black;
+            margin-bottom: 1.9rem;
+            padding-bottom: 0.9rem;
+            padding-right: 1.5rem;
+            
+            .languages__list-arrow {
+                margin-left: 0.5rem;
+            }
+
+            &:first-of-type {
+                padding-right: unset;
+                position: relative;
+                margin-right: 1rem;
+            }
+
+            &:first-of-type::after {
+                content: url("/images/Vector.png");
+                position: absolute;
+                bottom: 0.8rem;
+                right: -1.4rem;
+            }
+
+            &:last-of-type {
+                margin-bottom:1rem;
+                border-bottom: none;
+            }
+        }
+    }
+    .dropdown {
+        margin-top: 6rem;
+        margin-left: 1.9rem;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .buy {
+        margin-top: 4.1rem;
+        margin-right: 9.1rem;
+        margin-left: 1.2rem;
+
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, xl)) {
+            display: none;
+        }
+    }
+}

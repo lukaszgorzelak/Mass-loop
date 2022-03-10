@@ -1,0 +1,118 @@
+.crusher {
+    width: 144rem;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    position: relative;
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, lg)) {
+       margin-top: 3.8rem;
+    } 
+
+    .crusher__title {
+        @include font(900,5.5rem,6.7rem);
+        text-align: center;
+        width: 99.7rem;
+        height: 14rem;
+        color: $main_black;
+        margin-top: 7.4rem;
+        margin-bottom: 5.3rem;
+        margin-left: 1.8rem;
+
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, lg)) {
+            @include font(900,3.5rem,4.3rem);
+            width: 32rem;
+            height: 16.6rem;
+            margin-top: 1.2rem;
+        }
+    }
+    .crusher__img {
+        background-image: url("/images/crusher.png");
+        background-position: center center; 
+        background-repeat: no-repeat; 
+        background-size: contain;
+        height: 97rem;
+        position: relative;
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, lg)) {
+            &::after {
+                content: url("/images/Vector1.png");
+                position: fixed;
+                z-index: 1;
+                bottom: 30.5%;
+                right: 1.4%;
+                width: 8rem;
+                height: 8rem;
+                background-color: $main_orange;
+                box-shadow: 0px 2rem 5.9rem -1rem rgba(0, 0, 0, 0.15);
+                border-radius: 50%;
+                cursor: pointer;
+                @include center;
+            }
+        } 
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, lg)) {
+            height: 53.6rem;
+            background-size: cover;
+        } 
+    }
+
+    .crusher__content {
+        height: 36.5rem;
+        background-color: $main_orange;
+        border: 2rem solid #FFFFFF;
+        border-radius: 3rem;
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        bottom: -2.5%;
+        width: 144rem;
+        max-width: 100%;
+        left: 0;
+        margin-bottom: 6rem;
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, lg)) {
+            bottom: -31%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            border: none;
+        } 
+
+        .crusher__content-title {
+            @include font(900,4rem,4.9rem);
+            color: $main_black;
+            text-align: center;
+            width: 76.3rem;
+            height: 9.5rem;
+            margin-top: 6rem;
+            margin-left: 1.5rem;
+            @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, lg)) {
+                @include font(900,2.4rem,2.9rem);
+                width: 28rem;
+                height: 8.8rem;
+                margin-top: 3rem;
+                margin-right: -1.6rem;
+                margin-left: unset;
+            }
+        }
+
+        .crusher__content-describe {
+            @include font(400,2rem,3.2rem);
+            color: $main_black;
+            text-align: center;
+            width: 71.1rem;
+            height: 6.4rem;
+            margin-top: -2rem;
+            margin-left: 5rem;
+            @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, lg)) {
+                @include font(400,1.6rem,2.5rem);
+                width: 34rem;
+                height: 7.5rem;
+                margin-top: -3.5rem;
+                margin-bottom: 8.7rem;
+                margin-left: unset;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    }
+}
