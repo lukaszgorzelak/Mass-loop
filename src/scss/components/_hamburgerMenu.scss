@@ -15,7 +15,7 @@
       top: 7.4%;
     }
 
-    @media all and (min-width: map-get($brakepoints, xl)){
+    @media all and (min-width: 1201px){
         & {
            display: none;
         }
