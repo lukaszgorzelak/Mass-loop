@@ -11,7 +11,11 @@
     z-index: 4;
     transition: transform .3s .1s ease-in-out;
 
-    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, xl)) {
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)) {
+      top: 6.9%;
+    }
+
+    @media all and (min-width: map-get($brakepoints, sm)) and (max-width: map-get($brakepoints, xl)) {
       top: 7.4%;
     }
 
@@ -23,7 +27,7 @@
   }
 
   .hamburger--active {
-    z-index: 1;
+    z-index: 5;
   }
   
   .hamburger__box {
@@ -79,7 +83,7 @@
     height: 86vh;
     width: 100vw;
     position: absolute;
-    bottom: 0;
+    top: 10%;
     right:0;
     opacity:0;
     z-index: 2;

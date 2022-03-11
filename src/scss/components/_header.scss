@@ -5,6 +5,10 @@
     @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, xl)) {
         grid-template-columns: 1fr 1fr 14rem;
     }
+
+    picture {
+        z-index: 3;
+    }
     .logo {
         margin-top: 4.5rem;
         margin-left: 11.008rem;
