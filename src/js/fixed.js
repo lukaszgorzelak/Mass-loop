@@ -21,7 +21,6 @@ const Fixed = () => {
         logo.style.marginTop = '45px';
         btnBuy.style.marginTop = '41px';
         hamburger.style.cssText = "bottom: unset; top: 7.4%; right: 0";
-        
         for (const item of items) {
             item.style.marginTop = '60px';
         }
